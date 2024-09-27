@@ -1,76 +1,41 @@
-# Fooks
+# vite React TypeScript tailwindcss starter
 
-## Description
+Template for vite, React + tailwindcss + TypeScript projects with some tools preconfigured.
 
-Fooks is a modern web application designed to display newsletters efficiently and stylishly. Built with a robust stack featuring React.js, Tailwind CSS, and TypeScript, Fooks provides a seamless user experience, ensuring the latest newsletters are just a click away.
+## About
 
-## Features
+Template for vite, React + tailwindcss + TypeScript projects with some tools preconfigured.
 
-- **Newsletter Display**: Browse and read the latest newsletters in an organized, user-friendly interface.
-- **Responsive Design**: Tailored with Tailwind CSS to ensure a responsive, mobile-friendly experience across devices.
-- **Static Typing**: Utilizes TypeScript for enhanced reliability and maintainability of the codebase.
+![Screenshot](assets/screenshot.png)
 
-## Technologies Used
+### Libraries
 
-- **React.js**: A powerful JavaScript library for building user interfaces, particularly single-page applications.
-- **Tailwind CSS**: A utility-first CSS framework for crafting custom designs directly in your markup.
-- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript, offering static type-checking and better development tooling.
+- [React 18](https://reactjs.org/)
+- [React Router 6](https://reactrouter.com)
+- [tailwindcss 3](https://tailwindcss.com/)
+  - [tailwindcss forms plugin](https://tailwindcss-forms.vercel.app/)
+- [TypeScript 4.9.5](https://www.typescriptlang.org/)
+- [vite 4](https://vitejs.dev/)
+- [vitetest](https://vitest.dev/)
 
-## Getting Started
+### Tools
 
-### Prerequisites
+- [commitlint 17](https://commitlint.js.org)
+- [Conventional Commits 1](https://www.conventionalcommits.org)
+- [editorconfig](https://editorconfig.org/)
+- [eslint 8](https://eslint.org/)
+- [husky 8](https://typicode.github.io/husky/#/)
+- [Prettier 2](https://prettier.io/)
+- [VS Code settings](https://code.visualstudio.com/)
 
-Ensure you have the following installed on your machine:
-- Node.js
-- npm or yarn
+## Usage
 
-### Installation
+Create a new project from this template by clicking the "Use this template" button:
 
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/your-username/fooks.git
-    ```
+![](assets/template-usage.png)
 
-2. **Navigate to the Project Directory**:
-    ```bash
-    cd fooks
-    ```
-
-3. **Install Dependencies**:
-    ```bash
-    npm install
-    ```
-    or
-    ```bash
-    yarn install
-    ```
-
-### Running the Development Server
-
-Start the development server to view the application locally:
 ```bash
-npm start
-or
-
-bash
-
-yarn start
-This will run the app in development mode, typically accessible via http://localhost:3000.
-
-Usage
-Once the server is running, access the application in your browser to explore the latest newsletters. The design is intuitive, allowing users to easily navigate through different sections and find the content that's most relevant to them.
-
-Contribution
-If you wish to contribute to Fooks, please follow these steps:
-
-Fork the repository.
-Create a new branch (git checkout -b feature-XYZ).
-Implement your changes.
-Commit your changes (git commit -am 'Add new feature XYZ').
-Push to the branch (git push origin feature-XYZ).
-Open a Pull Request for review.
-License
-This project is licensed under the MIT License - see the LICENSE file for further details.
-
-Acknowledgements
-Thanks to the React, Tailwind CSS, and TypeScript communities for providing amazing tools and resources that power this project.
+yarn
+yarn dev
+yarn test
+```
