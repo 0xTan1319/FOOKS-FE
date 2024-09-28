@@ -7,14 +7,24 @@ import PanelHeader from '../components/User/PanelHeader'
 import PanelContent from '../components/User/PanelContent'
 
 // Type definition for FormData
+// interface FormDataType {
+//   authorImg: string
+//   authorName: string
+//   panelImg: string
+//   newsTitle: string
+//   panelContent: string
+//   date: string
+//   newsTitle: string
+// }
+
 interface FormDataType {
+  _id: number
+  id: number
+  authorImg: string
   authorName: string
-  avatar: string
-  panelImg: string
-  panelTitle: string
-  panelContent: string
-  date: string
   newsTitle: string
+  panelImg: string
+  panelContent: string
 }
 
 const Home: React.FC = () => {
@@ -30,7 +40,9 @@ const Home: React.FC = () => {
     try {
       const response = await axios.get('http://localhost:4000/api/news/getNews')
       const panelData: FormDataType[] = response.data
+      console.log(response.data)
       setItems(panelData) // Set the fetched data into the state
+      console.log(panelData[0])
       if (panelData.length > 0) {
         setPanelContent(panelData[0].panelContent || '') // Use an empty string if content is undefined
       }
@@ -54,7 +66,7 @@ const Home: React.FC = () => {
               <div className="flex flex-col">
                 {items.length > 0 && (
                   <PanelHeader
-                    srcImg={items[0]?.avatar}
+                    srcImg={items[0]?.authorImg}
                     author={items[0]?.authorName}
                     publishDate="01/03/2024"
                   />
@@ -64,9 +76,9 @@ const Home: React.FC = () => {
                 />
               </div>
               <div className="panel-img mt-5">
-                {items[1] && (
+                {items[0] && (
                   <Image
-                    srcUrl={items[1]?.panelImg} // Can also use dynamic data if available
+                    srcUrl={items[0]?.panelImg} // Can also use dynamic data if available
                     alt="panel"
                     classname=""
                   />
@@ -84,7 +96,7 @@ const Home: React.FC = () => {
               {items[1] && (
                 <SubPanel
                   imgUrl={items[1]?.panelImg}
-                  alt={items[1]?.panelTitle}
+                  alt={items[1]?.newsTitle}
                   panelTitle={items[1]?.newsTitle}
                   panelContent={items[1]?.panelContent}
                   date="01/03/2024"
@@ -93,7 +105,7 @@ const Home: React.FC = () => {
               {items[2] && (
                 <SubPanel
                   imgUrl={items[2]?.panelImg}
-                  alt={items[2]?.panelTitle}
+                  alt={items[2]?.newsTitle}
                   panelTitle={items[2]?.newsTitle}
                   panelContent={items[2]?.panelContent}
                   date="01/03/2024"
