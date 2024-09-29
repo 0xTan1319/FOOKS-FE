@@ -13,8 +13,11 @@
     "@material-ui/core": "^4.12.4",
     "@types/react": "^18.3.9",
     "axios": "^1.7.7",
+    "loading-request": "^2.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-loading-icons": "^1.1.0",
+    "react-toastify": "^10.0.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.3",

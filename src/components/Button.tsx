@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 interface ButtonProps {
   label: string
@@ -13,6 +13,7 @@ const Button: React.FC<ButtonProps> = ({
   disabled,
   className
 }) => {
+  const [isDisabled, setIsDisabled] = useState(false)
   return (
     <button
       onClick={onClick}

@@ -5,11 +5,6 @@ import Home from './pages/Home'
 
 function App(): ReactElement {
   return (
-    // <div className="">
-      
-    //   <Admin />
-    
-    // </div>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
