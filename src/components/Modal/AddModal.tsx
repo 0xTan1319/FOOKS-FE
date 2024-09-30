@@ -73,13 +73,12 @@ const AddModal: React.FC<AddModalProps> = ({
   }
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    ;<Circles />
     setIsLoading(true)
 
     // Simulate an asynchronous operation (e.g., API call)
     setTimeout(() => {
       setIsLoading(false)
-    }, 20000)
+    }, 10000)
 
     event.preventDefault()
     let authorImgHash = ''
@@ -121,15 +120,6 @@ const AddModal: React.FC<AddModalProps> = ({
 
     onClose()
   }
-
-  // const handleClick = () => {
-  //   setIsLoading(true)
-
-  //   // Simulate an asynchronous operation (e.g., API call)
-  //   setTimeout(() => {
-  //     setIsLoading(false)
-  //   }, 20000)
-  // }
 
   if (!isAddOpen) {
     return null

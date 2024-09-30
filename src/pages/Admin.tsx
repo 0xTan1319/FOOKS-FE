@@ -53,7 +53,7 @@ function Admin() {
         'http://localhost:4000/api/news/editNews',
         { ...newData }
       )
-      toast('Success')
+      toast.success('Success')
       fetchData()
       setIsEditModalOpen(false)
       setItemToEdit(null)
@@ -87,7 +87,7 @@ function Admin() {
     try {
       console.log('del--------id-------->', id)
       await axios.delete(`http://localhost:4000/api/news/delNews/${id}`)
-      console.log('sec')
+      toast.warning('Item deleted successfully')
       fetchData()
       // setItems(items.filter(item => item.id !== id));
     } catch (error) {
